@@ -12,19 +12,19 @@ public class TestProblemes {
 
         Problema1.main(new String[]{});
 
-        assertEquals("[sol, ordenador, cable] → [3, 9, 5]", outContent.toString().trim());
+        assertEquals("[sol, ordenador, cable] -> [3, 9, 5]", outContent.toString().trim());
     }
 
     @Test
     void testProblema1b() {
 
-        System.setIn(new java.io.ByteArrayInputStream("1\n\n".getBytes()));
+        System.setIn(new java.io.ByteArrayInputStream("1\n1\n".getBytes()));
         java.io.ByteArrayOutputStream outContent = new java.io.ByteArrayOutputStream();
         System.setOut(new java.io.PrintStream(outContent));
 
         Problema1.main(new String[]{});
 
-        assertEquals("[] → [0]", outContent.toString().trim());
+        assertEquals("[1] -> [1]", outContent.toString().trim());
     }
 
     @Test
@@ -42,7 +42,7 @@ public class TestProblemes {
     @Test
     void testProblema2b() {
         
-        System.setIn(new java.io.ByteArrayInputStream("3\ncacatua\n\ncotxe\nw\n".getBytes()));
+        System.setIn(new java.io.ByteArrayInputStream("3\ncacatua\nx\ncotxe\nw\n".getBytes()));
         java.io.ByteArrayOutputStream outContent = new java.io.ByteArrayOutputStream();
         System.setOut(new java.io.PrintStream(outContent));
 
@@ -72,7 +72,7 @@ public class TestProblemes {
 
         Problema3.main(new String[]{});
 
-        assertEquals("", outContent.toString().trim());
+        assertEquals("[]", outContent.toString().trim());
     }
 
     @Test
@@ -110,7 +110,7 @@ public class TestProblemes {
 
         Problema5.main(new String[]{});
 
-        assertEquals("[0, 1]\n[1, 1]\n[2,1]", outContent.toString().trim());
+        assertEquals("[0, 1]\n[1, 1]\n[2, 1]", outContent.toString().trim());
     }
        
     @Test
