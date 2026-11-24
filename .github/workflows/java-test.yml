@@ -24,7 +24,7 @@ jobs:
       run: wget -q https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.9.3/junit-platform-console-standalone-1.9.3.jar
 
     - name: Compile Java
-      run: : javac --enable-preview --release 27 -cp junit-platform-console-standalone-1.9.3.jar *.java
+      run: javac --enable-preview --release 27 -cp junit-platform-console-standalone-1.9.3.jar *.java
 
     - name: Run JUnit Tests
-      run: un: java --enable-preview -jar junit-platform-console-standalone-1.9.3.jar --class-path . --scan-class-path
+      run: java --enable-preview -jar junit-platform-console-standalone-1.9.3.jar --class-path . --scan-class-path
